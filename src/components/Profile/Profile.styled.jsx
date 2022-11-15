@@ -71,6 +71,9 @@ export const StatsItem = styled.li`
 `;
 
 export const StatLabel = styled.span`
+  &:first-letter {
+    text-transform: uppercase;
+  }
   font-size: 16px;
   color: #757575;
   margin-bottom: 5px;

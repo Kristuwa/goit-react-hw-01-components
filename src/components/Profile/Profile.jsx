@@ -13,31 +13,25 @@ import {
 } from './Profile.styled';
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
+  const keys = Object.keys(stats);
   return (
     <Card>
       <Description>
-        <AvatarImg
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-        />
+        <AvatarImg src={avatar} alt="User avatar" />
         <UserName>{username}</UserName>
         <UserTag>@{tag}</UserTag>
         <UserLocation>{location}</UserLocation>
       </Description>
 
       <StatsList>
-        <StatsItem>
-          <StatLabel>Followers</StatLabel>
-          <StatQuantity>{stats.followers}</StatQuantity>
-        </StatsItem>
-        <StatsItem>
-          <StatLabel>Views</StatLabel>
-          <StatQuantity>{stats.views}</StatQuantity>
-        </StatsItem>
-        <StatsItem>
-          <StatLabel>Likes</StatLabel>
-          <StatQuantity>{stats.likes}</StatQuantity>
-        </StatsItem>
+        {keys.map(item => {
+          return (
+            <StatsItem key={item}>
+              <StatLabel>{item}</StatLabel>
+              <StatQuantity>{stats[item]}</StatQuantity>
+            </StatsItem>
+          );
+        })}
       </StatsList>
     </Card>
   );
