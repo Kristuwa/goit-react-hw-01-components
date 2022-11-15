@@ -2,9 +2,6 @@ import styled from '@emotion/styled';
 
 export const Card = styled.div`
   width: 270px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 0;
   border: 1px solid #a1a1a1;
   border-radius: 10px;
 `;

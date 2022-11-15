@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
 export const ListFriends = styled.ul`
-  padding: 0;
-  margin: 20px auto 20px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   gap: 10px;

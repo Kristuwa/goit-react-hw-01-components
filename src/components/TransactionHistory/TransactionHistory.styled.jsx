@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
 
 export const Table = styled.table`
+  margin-left: auto;
+  margin-right: auto;
   table-layout: fixed;
   width: 90%;
   border-collapse: collapse;
   border: 1px solid #a1a1a1;
-  margin-bottom: 20px;
-  margin-top: 20px;
   text-align: center;
 `;
 

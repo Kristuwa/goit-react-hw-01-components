@@ -4,11 +4,8 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-export const SectionCardStatistics = styled.section`
+export const SectionCardStatistics = styled.div`
   width: 350px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 0;
   border: 1px solid #4e4e4e;
   border-radius: 10px;
   background-color: #ffffff;

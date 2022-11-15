@@ -9,3 +9,7 @@ export const Container = styled.div`
   color: #010101;
   background-color: #a1a1a1b5;
 `;
+
+export const Section = styled.section`
+  padding: 20px;
+`;
