@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import {
   ListFriends,
-  FriendItem,
+  FriendListItem,
   StatusOnline,
   FriendAvatar,
   FriendName,
@@ -12,11 +12,11 @@ export const FriendList = ({ friends }) => {
     <ListFriends>
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
-          <FriendItem key={id}>
+          <FriendListItem key={id}>
             <StatusOnline isOnline={isOnline}>{isOnline}</StatusOnline>
             <FriendAvatar src={avatar} alt="User avatar" width="48" />
             <FriendName>{name}</FriendName>
-          </FriendItem>
+          </FriendListItem>
         );
       })}
     </ListFriends>
@@ -30,6 +30,6 @@ FriendList.propTypes = {
       avatar: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
       id: PropTypes.number.isRequired,
-    })
-  ),
+    }).isRequired
+  ).isRequired,
 };
